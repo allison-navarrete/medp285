@@ -8,14 +8,23 @@
         <meta name="author" content="Alt"/>
 
         <style>
+
             body 
             {   margin:0;
                 background-color: #FDDEFF;
+                font-family: sans-serif;
+                color: #333333;
             }
 
             h1 {color:#333}
-            
-            ul 
+
+            h2 {
+                padding-left: 5%;
+                font-size: 30px;
+                padding-top: 10px;
+            }
+
+            .navigation
             {   list-style-type: none;
                 margin: 0;
                 padding: 0;
@@ -30,61 +39,56 @@
                     text-align: center;
                     padding: 14px 16px;
                     text-decoration: none;}
-            li a:hover:not(.active) {background-color: #111;}
-
-            .active {background-color: #FAA9FD;}
-
-            .mySlides {display: none;}
+            li a:hover:not(.active) {background-color: rgb(180, 125, 168);}
       
-            img {vertical-align: middle;}
-
-            .slideshow-container 
-            {   width: 50%;
-                position: relative;
-                vertical-align: middle;
+            img {vertical-align: middle;
                 margin: auto;
+                width: 100%;
             }
 
-            .numbertext 
-            {   color: #f2f2f2;
-                font-size: 12px;
-                padding: 8px 12px;
-                position: absolute;
-                top: 0;
+            .index-description {
+                width: 90%;
+                padding: 20px;
+                margin: 10px;
+                display: inline-block; vertical-align: middle;
             }
 
-            .fade 
-            {
-                -webkit-animation-name: fade;
-                -webkit-animation-duration: 1.5s;
-                animation-name: fade;
-                animation-duration: 1.5s;
+            .button {
+                background-color: #333333;
+                border: none;
+                color: white;
+                padding: 15px 40px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 25px;
+                cursor: pointer;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
             }
 
-            @-webkit-keyframes fade 
-            {from {opacity: .4} 
-                to {opacity: 1}
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #333;
+                color: white;
+                text-align: center;
+                margin-top: 20px;
             }
-
-            @keyframes fade
-            {from 
-                {opacity: 0.4;}
-                to 
-                {opacity: 1;}
-            }
-
         </style>
     </head>
 
     <body>
         <!-- navigation-->
         <nav id="nav">
-            <ul>
+            <ul class="navigation">
                 <li><a href="index.html">home</a></li>
                 <li><a href="projects.html">projects</a></li>
                 <li><a href="#about">about</a></li>
                 <li><a href="https://allisonnavarrete.wordpress.com" target="_blank">blog</a></li>
-                <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
         
@@ -97,7 +101,7 @@
                (max-width: 960px) 90vw,
     	         (max-width: 1280px) 70vw,
     	         1280px" src="img/header(480px).jpg" alt="soft blue header image with colorful swirls">
-                <h1> allison's medp 250 homepage </h1>
+                <h1> home </h1>
             </header>
 
             <hr />
@@ -111,101 +115,28 @@
                 <section id="projects">
                     <article>
                         <h2> current projects </h2>
-                        <ol type="1">
+                        <ul>
                             <details>
                                 <summary><li><strong>Photo Essay:</strong><em>"The Machine Stops" &nbsp;</em></li></summary>
-                                <div class="slideshow-container">
-    
-                                    <div class="mySlides fade">
-                                        <div class="numbertext"> 1/11 </div>
-                                        <img src="img/photo-essay/alexa-glowing.jpg" style="width: 80%;" >
-                                    </div>
-                            
-                                    <div class="mySlides fade">
-                                        <div class="numbertext"> 2/11 </div>
-                                        <img src="img/photo-essay/barred-window.jpeg" style="width: 80%;" >
-                                    </div>
-                                
-                                    <div class="mySlides fade">
-                                        <div class="numbertext"> 3/11 </div>
-                                        <img src="img/photo-essay/blurry-housetops.jpg" style="width: 80%;" >
-                                    </div>
-                            
-                                    <div class="mySlides fade">
-                                        <div class="numbertext"> 4/11 </div>
-                                        <img src="img/photo-essay/dusty-wires.jpg" style="width: 80%;" >
-                                    </div>
-                            
-                                    <div class="mySlides fade">
-                                        <div class="numbertext"> 5/11 </div>
-                                        <img src="img/photo-essay/fence-wall.jpeg" style="width: 80%;" >
-                                    </div>
-                            
-                                    <div class="mySlides fade">
-                                        <div class="numbertext"> 6/11 </div>
-                                        <img src="img/photo-essay/lamp.jpeg" style="width: 80%;" >
-                                    </div>
-                            
-                                    <div class="mySlides fade">
-                                        <div class="numbertext"> 7/11 </div>
-                                        <img src="img/photo-essay/messy-wires.jpeg" style="width: 80%;" >
-                                    </div>
-                            
-                                    <div class="mySlides fade">
-                                        <div class="numbertext"> 8/11 </div>
-                                        <img src="img/photo-essay/overhead-lights.jpg" style="width: 80%;" >
-                                    </div>
-                            
-                                    <div class="mySlides fade">
-                                        <div class="numbertext"> 9/11 </div>
-                                        <img src="img/photo-essay/prohibited-sign.jpeg" style="width: 80%;" >
-                                    </div>
-                            
-                                    <div class="mySlides fade">
-                                        <div class="numbertext"> 10/11 </div>
-                                        <img src="img/photo-essay/telephone-lines.jpeg" style="width: 80%;" >
-                                    </div>
-                            
-                                    <div class="mySlides fade">
-                                        <div class="numbertext"> 11/11 </div>
-                                        <img src="img/photo-essay/traffic-cam.jpeg" style="width: 80%;" >
-                                    </div>
-                            
-                                </div>
-                                    <script>
-                                    var slideIndex = 0;
-                                    showSlides();
-                              
-                                    function showSlides() {
-                                      var i;
-                                      var slides = document.getElementsByClassName("mySlides");
-                                      for (i = 0; i < slides.length; i++) {
-                                        slides[i].style.display = "none";
-                                      }
-                                      slideIndex++;
-                                      if (slideIndex > slides.length) {slideIndex = 1;}
-                        
-                                      slides[slideIndex - 1].style.display = "block";
-                                      setTimeout(showSlides, 2000); // Change image every 2 seconds
-                                    }
-                                  </script>
-                                <p style="padding-right: 25%;"><strong>Assignment:</strong> Create a visual interpretation of the assigned reading - E.M. Forster's 1909 short story "The Machine Stops", but set today. In other words, read the story, consider how similar ideas may exist in our current reality and take photographs that could be an interpretation of Forseter's Machine.</p>
+                                <p class="index-description"><strong>Assignment:</strong> Create a visual interpretation of the assigned reading - E.M. Forster's 1909 short story "The Machine Stops", but set today. In other words, read the story, consider how similar ideas may exist in our current reality and take photographs that could be an interpretation of Forseter's Machine.</p>
+                                <!--button redirects to projects page-->
+                                <a href="projects.html"><button class="button">view</button></a>
                             </details>
-                            
-                            <details>
+                            <br />
+                            <details style="padding-bottom: 10px;">
                                 <summary><li> <strong> Video:</strong><em> lonely summer &nbsp;</em></li></summary>
-                                <br />
-                                <video controls width="60%" >
-                                    <source src="https://fmundergrad.hunter.cuny.edu/~navarretea/media/video/lonely-summer.mp4" type="video/mp4">
-                                    <track src="video/lonely-summer.vtt" kind="captions" srclang="en" label="english" default />
-                                    </video>
-                                <p style="padding-right: 25%;"><strong>Assignment:</strong> Using the template created in class - create a brief video (approximately 1 min) or video series accompanied by textual explanation as webvtt. The video may be aesthetically or conceptually informed by the week 1 photo essay or a work inspired by assigned reading (how is technology affecting human behavior) or <em>follow your own inspiration</em>.</p>
+                                <p class="index-description"><strong>Assignment:</strong> Using the template created in class - create a brief video (approximately 1 min) or video series accompanied by textual explanation as webvtt. The video may be aesthetically or conceptually informed by the week 1 photo essay or a work inspired by assigned reading (how is technology affecting human behavior) or <em>follow your own inspiration</em>.</p>
+                                <!--button redirects to projects page-->
+                                <a href="projects.html"><button class="button">view</button></a>
                             </details>
-                        </ol>
+                        </ul>
                     </article>
                 </section>
         </div>
-
+        <br />
+        <div class="footer">
+            <p> <strong>medp 285</strong> | allison navarrete </p>
+        </div>
     </body>
 
 </html>
