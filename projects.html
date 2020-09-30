@@ -43,25 +43,75 @@
                 padding-top: 10px;
             }
 
-            ul
-            {   list-style-type: none;
-                margin: 0;
-                padding: 0;
+            /*navigation bar*/
+            .navbar {
                 overflow: hidden;
                 background-color: #333;
+                font-family: sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                float:left
+            }
+            .navbar a {
+                display: inline-block;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 14px;
+                text-decoration: none;
             }
 
-            li {float: left;}
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
 
-            li a {display: block;
-                    color: white;
-                    text-align: center;
-                    padding: 14px 16px;
-                    text-decoration: none;}
-            li a:hover:not(.active) {background-color: #333;}
+            .dropdown .dropbtn {
+                font-size: 16px;
+                padding-left: 16px;  
+                border: none;
+                outline: none;
+                color: white;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
 
-            .active {background-color: #FAA9FD;}
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color:  rgb(180, 125, 168);
+            }
 
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #FDDEFF;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                float: none;
+                color: #333;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                background-color:#f2f2f2;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            /* content */
+
+            /*for TMS Photo Essay*/
             .mySlides {display: none;}
       
             img {vertical-align: middle;}
@@ -90,6 +140,7 @@
                 {opacity: 1;}
             }
 
+            /*for project information + display*/
             .project {
                 display: block;
                 margin-left: auto;
@@ -111,6 +162,7 @@
                 display: inline-block; vertical-align: middle;
             }
 
+            /*footer*/
             .footer {
                 position: fixed;
                 left: 0;
@@ -126,15 +178,24 @@
     </head>
 
         <body>
-              <!-- navigation-->
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="projects.html">projects</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="https://allisonnavarrete.wordpress.com" target="_blank">blog</a></li>
-                </ul>
-            </nav>
+            <!-- navigation-->
+        <nav id="navbar">
+            <div class="navbar">
+                <li><a href="index.html">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="https://allisonnavarrete.wordpress.com" target="_blank">blog</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="projects.html">projects</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#"> photo essay </a>
+                        <a href="#"> vtt video </a>
+                        <a href="the-view-from-venus.html"> collage </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
             
             <!--section: current projects-->
 

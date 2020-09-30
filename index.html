@@ -42,24 +42,73 @@
                 font-size: 30px;
                 padding-top: 10px;
             }
-
-            .navigation
-            {   list-style-type: none;
-                margin: 0;
-                padding: 0;
+            /*navigation bar*/
+            .navbar {
                 overflow: hidden;
                 background-color: #333;
+                font-family: sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                float:left
+            }
+            .navbar a {
+                display: inline-block;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 14px;
+                text-decoration: none;
             }
 
-            li {float: left;}
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
 
-            li a {display: block;
-                    color: white;
-                    text-align: center;
-                    padding: 14px 16px;
-                    text-decoration: none;}
-            li a:hover:not(.active) {background-color: rgb(180, 125, 168);}
-      
+            .dropdown .dropbtn {
+                font-size: 16px;
+                padding-left: 16px;  
+                border: none;
+                outline: none;
+                color: white;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color:  rgb(180, 125, 168);
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #FDDEFF;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+            float: none;
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                background-color:#f2f2f2;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            
+            /* content */
             img {vertical-align: middle;
                 margin: auto;
                 width: 100%;
@@ -87,11 +136,13 @@
                 transition-duration: 0.4s;
             }
 
+            /* footer */
             .footer {
                 position: fixed;
-                left: 0;
                 bottom: 0;
+                left: 0;
                 width: 100%;
+                padding: 5px 0px;
                 background-color: #333;
                 color: white;
                 text-align: center;
@@ -102,13 +153,22 @@
 
     <body>
         <!-- navigation-->
-        <nav id="nav">
-            <ul class="navigation">
+        <nav id="navbar">
+            <div class="navbar">
                 <li><a href="index.html">home</a></li>
-                <li><a href="projects.html">projects</a></li>
                 <li><a href="#about">about</a></li>
                 <li><a href="https://allisonnavarrete.wordpress.com" target="_blank">blog</a></li>
-            </ul>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="projects.html">projects</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#"> photo essay </a>
+                        <a href="#"> vtt video </a>
+                        <a href="the-view-from-venus.html"> collage </a>
+                    </div>
+                </div>
+            </div>
         </nav>
         
         <div style="padding: 20px;">
@@ -142,11 +202,18 @@
                                 <a href="projects.html"><button class="button">view</button></a>
                             </details>
                             <br />
-                            <details style="padding-bottom: 10px;">
+                            <details>
                                 <summary><li> <strong> Video:</strong><em> lonely summer &nbsp;</em></li></summary>
                                 <p class="index-description"><strong>Assignment:</strong> Using the template created in class - create a brief video (approximately 1 min) or video series accompanied by textual explanation as webvtt. The video may be aesthetically or conceptually informed by the week 1 photo essay or a work inspired by assigned reading (how is technology affecting human behavior) or <em>follow your own inspiration</em>.</p>
                                 <!--button redirects to projects page-->
                                 <a href="projects.html"><button class="button">view</button></a>
+                            </details>
+                            <br />
+                            <details style="padding-bottom: 10px;">
+                                <summary><li> <strong> Layered Collage:</strong><em> the view from venus &nbsp;</em></li></summary>
+                                <p class="index-description"><strong>Assignment:</strong> Create a layered collage consisting of a background image and at minimum 3 absolutely position containers and 3 floats (left, right, clear) and the z-index to superimpose containers. Combine text, image, audio and video on the page, try making it topical.</em>.</p>
+                                <!--button redirects to individual project page-->
+                                <a href="the-view-from-venus.html"><button class="button">view</button></a>
                             </details>
                         </ul>
                     </article>
