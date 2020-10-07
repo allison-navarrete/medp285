@@ -1,0 +1,76 @@
+* { box-sizing: border-box; }
+
+/* CSS GRID Layout */
+/* css units: https://www.w3schools.com/cssref/css_units.asp */
+/* vh - view height; vw - view width */
+/*body {
+  font-family: Verdana, sans-serif;
+}
+/* if you were to use a div with #container instead of the body */
+/*
+#container {
+  display: grid;
+  min-width: auto;
+  min-height: 100vh;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 1fr 4fr 1fr;
+  margin: 0;
+}
+*/
+
+body {
+  font-family: Verdana, sans-serif;
+  display: grid;
+  min-width: auto;
+  min-height: 100vh;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 2fr 3fr 2fr;
+  margin: 0;
+}
+header {
+  grid-row: 1;
+  /* the numbers below represent the starting track and ending track
+    starting track - 1/4 - ending track */
+  grid-column: 1 / 4;
+  background: black;
+  font-family: "Verdana";
+  margin: 0;
+}
+
+extra {
+    grid-row: 2;
+    grid-column: 1/2;
+    padding: 0 10px;
+  }
+
+main {
+  grid-row: 2;
+  grid-column: 2/3;
+  padding: 0 20px;
+}
+aside {
+  grid-row: 2;
+  grid-column: 3/4;
+  padding: 0 10px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  grid-row: 3;
+  grid-column: 1/4;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+p {line-height: 1.5em;}
+
+.tv {
+    width: 200px;
+    height: 155px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15%;
+}
