@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> "v for vengeance" </title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="medp285.css">
+  
+  <!--animation css ref-->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+ 
+  <!-- star favicon-->
+ <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+ <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+ <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+ <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+ <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+ <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+ <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+ <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+ <link rel="manifest" href="favicon/manifest.json">
+ <meta name="msapplication-TileColor" content="#ffffff">
+ <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+ <meta name="theme-color" content="#ffffff">
+  
+  
+  
+  <style>
+	/*hide scroll bar to get rid of jumps*/
+    body { 
+      overflow: hidden;
+      background-color: black;
+      font-family: Vendetta;
+    }
+
+    .content {
+      padding-top: 2em;
+    }
+
+    @font-face {
+      font-family: Vendetta;
+      src: url(img/v_for_vendetta/VENDETTA-font.TTF);
+    }
+
+		@keyframes topFadeOut {
+			0% {
+				position: absolute;
+				top: -10%;
+				opacity: 0;
+			}
+			75% {
+				position: absolute;
+				top: 22%;
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+
+		@keyframes bottomFadeOut {
+			0% {
+				position: absolute;
+				bottom: -10%;
+				opacity: 0;
+			}
+			75% {
+				position: absolute;
+				bottom: 22%;
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+
+@keyframes topFadeOutVertical {
+  0% {
+    position: absolute;
+    top: -10%;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    top: 45%;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rightFadeInOut {
+  0% {
+    position: absolute;
+    right: -10%;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    right: 10%;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    right: 10%;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+.first-text {
+  font-size: 5em;
+  position: absolute;
+  left: 40%;
+  top: 60%;
+	color: red;
+  opacity: 0;
+  animation-name: bounceInUp;
+  animation-duration: 3s;
+}
+
+.second-text {
+  font-size: 3.5em;
+  position: absolute;
+  left: 5%;
+  top: 30%;
+	color: red;
+  opacity: 0;
+  animation-name: topFadeOut;
+  animation-delay: 2s;
+  animation-duration: 5s;
+}
+
+.third-text {
+  font-size: 3em;
+  position: absolute;
+  top: 15%;
+	color:whitesmoke;
+  opacity: 0;
+  animation-name: rightFadeInOut;
+  animation-delay: 6s;
+  animation-duration: 8s;
+}
+
+.fourth-text {
+  transform: rotate(-90deg);
+  font-size: 2em;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+	color: red;
+	white-space: nowrap;/*no line break*/
+  opacity: 0;
+  animation-name: topFadeOutVertical;
+  animation-delay: 8s;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+.vengeance-text {
+  font-size: 3em;
+  font-style: italic;
+  position: absolute;
+  background-color: black;
+  padding: 10px;
+  top: 55%;
+  left: 10%;
+	color: whitesmoke;
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-delay: 25s;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.fifth-text {
+  font-size: 3em;
+  position: absolute;
+  background-color: black;
+  padding: 10px;
+  top: 55%;
+  left: 10%;
+	color: red;
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-delay: 10s;
+  animation-duration: 9s;
+}
+
+.sixth-text {
+  font-size: 3em;
+  position: absolute;
+  left: 7%;
+  bottom: 10%;
+	color: whitesmoke;
+  opacity: 0;
+  animation-name: bottomFadeOut;
+  animation-delay: 15s;
+  animation-duration: 9s;
+}
+
+.last-text {
+  font-size: 4em;
+  font-style: italic;
+  position: absolute;
+  left: 65%;
+  bottom: 10%;
+	color: red;
+  opacity: 0;
+  animation-name: bottomFadeOut;
+  animation-delay: 15s;
+  animation-duration: 14s;
+}
+
+.V-text {
+  font-size: 4em;
+  font-style: italic;
+  position: absolute;
+  left: 65%;
+  bottom: 10%;
+	color: red;
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-delay: 27.5s;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+.V-img {
+  float: right;
+  width: 65%;
+  opacity: 0.5;
+}
+
+	</style>
+</head>
+<body>
+
+  <!-- navigation-->
+  <nav id="navbar">
+    <div class="navbar">
+        <li><a href="index.html">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="https://allisonnavarrete.wordpress.com" target="_blank">blog</a></li>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="projects.html">projects</a>
+            </button>
+            <div class="dropdown-content">
+                <a href="projects.html"> photo essay </a>
+                <a href="projects.html"> vtt video </a>
+                <a href="the-view-from-venus.html"> collage </a>
+                <a href="ec-static.html"> css grid</a>
+                <a href="v-for-vengeance.html"> text animation </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+  <div id="v for vendetta - v speech" class="content">
+    
+  <div id="background image">
+    <img src="img/v_for_vendetta/vfv-BG.jpg" class="V-img">
+  </div>
+
+  <!--animated text: "V's introductory speech" from V for Vendetta-->
+  <div class="first-text"><em> Voila! </em></div>
+	<div class="second-text">In view, a humble vaudevillian veteran, cast vicariously as both victim and villain by the vicissitudes of Fate. </div>
+  <div class="third-text">This visage, no mere veneer of vanity, is it vestige of the vox populi, now vacant, vanished, as the once vital voice of the verisimilitude now venerates what they once vilified.</div>
+  <div class="fourth-text">However, this valorous visitation of a bygone vexation stands vivified, and has vowed to vanquish these venal and virulent vermin vanguarding vice and vouchsafing the violently vicious and voracious violation of volition.</div>
+  
+  <!--repeating quote: text-->
+  <div class="vengeance-text"><em>The only verdict is vengeance </em></div>
+
+  <div class="fifth-text"> The only verdict is vengeance; a vendetta held as a votive, not in vain, for the value and veracity of such shall one day vindicate the vigilant and the virtuous. </div>
+  <div class="sixth-text"> Verily, this vichyssoise of verbiage veers most verbose vis-à-vis an introduction, and so it is my very good honor to meet you and you may call me</div>
+ 
+  <!--"V" sign-off - marks the end of the speech -->
+  <div class="last-text"> V.</div>
+ 
+  <!-- repeating quote: V -->
+  <div class="V-text"> V.</div>
+
+
+  </div>
+</body>
+</html>
