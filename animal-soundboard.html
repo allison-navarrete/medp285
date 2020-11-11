@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Audio Play Vanilla JS</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+        body {
+          /*background-image: url("img/animal-soundboard/cute-farm-animals.jpg");
+          /* Full height */
+          /*height: 100%;
+          /* Center and scale the image nicely */
+          background-color: #fae8cc;
+          text-align: center;
+        }
+        
+        @font-face {
+          font-family: Farmhouse;
+          src: url(img/animal-soundboard/father-farmhouse-sans-font/FatherFarmhouseSans.otf);
+        }
+
+        h1 {
+          font-family:Farmhouse;
+          font-size: 4em;
+          font-style: oblique;
+          font-kerning: 10px;
+        }
+
+        h2 {
+          font-family: Farmhouse;
+          font-size: 2em;
+          font-weight: lighter;
+        }
+
+      .grid-container {
+        display: grid;
+        position: relative;
+        vertical-align: center;
+        align-content: center;
+        text-align: center;
+        left: auto; top:0; right: auto;
+        min-height: 20vh;
+        min-width: 20vw;
+        grid-template-columns: 1fr 1fr 1fr; /* 3 column gird */
+        grid-template-rows: auto auto auto;
+
+        /*background-image: url("img/animal-soundboard/cute-farm-animals.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 150vh 50vw;*/
+      }
+      /* this is just to see the sound boxes */
+      /*.gridSnd {
+        border: 1px solid red;*/
+      
+    </style>
+  </head>
+  <body>
+
+    <h1>on the farm</h1>
+    <h2> click on the animals to hear the sound they make &nbsp!</h2>
+
+      <div class="grid-container">
+        <!-- first row -->
+        <div class="gridSnd" onclick="playSound('clip1')"
+          onmouseout="stopSound('clip1')"><img src="img/animal-soundboard/cow.png" alt="cow" width="200">
+        </div>
+        <audio id='clip1' src="audio/animal-soundboard/sfx-cow.mp3"></audio>
+
+        <div class="gridSnd" onclick="playSound('clip2')"
+          onmouseout="stopSound('clip2')"><img src="img/animal-soundboard/pig.png" alt="pig" width="200"></div>
+        <audio id='clip2' src="audio/animal-soundboard/sfx-pig.mp3"></audio>
+
+        <div class="gridSnd" onclick="playSound('clip3')"
+          onmouseout="stopSound('clip3')"><img src="img/animal-soundboard/sheep.png" alt="sheep" width="200"></div>
+        <audio id='clip3' src="audio/animal-soundboard/sfx-sheep.mp3"></audio>
+
+        <!-- second row -->
+        <div class="gridSnd" onclick="playSound('clip4')"
+          onmouseout="stopSound('clip4')"><img src="img/animal-soundboard/duck.png" alt="duck" width="200"></div>
+        <audio id='clip4' src="audio/animal-soundboard/sfx-duck.mp3"></audio>
+
+        <div class="gridSnd" onclick="playSound('clip5')"
+          onmouseout="stopSound('clip5')"><img src="img/animal-soundboard/rooster.png" alt="rooster" width="200"></div>
+        <audio id='clip5' src="audio/animal-soundboard/sfx-rooster.mp3"></audio>
+
+        <div class="gridSnd" onclick="playSound('clip6')"
+          onmouseout="stopSound('clip6')"><img src="img/animal-soundboard/horse.png" alt="horse" width="200"></div>
+        <audio id='clip6' src="audio/animal-soundboard/sfx-horse.mp3"></audio>
+
+      </div>
+    <!--</div>-->
+
+    <script>
+    // https://www.w3schools.com/jsref/dom_obj_audio.asp
+    function playSound(soundobj) {
+      var thissound=document.getElementById(soundobj);
+      thissound.play();
+    }
+   // turn off this function to let the sound continue
+    function stopSound(soundobj) {
+      var thissound=document.getElementById(soundobj);
+      thissound.pause();
+    }
+  </script>
+  </body>
+</html>
