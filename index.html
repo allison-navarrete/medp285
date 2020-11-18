@@ -35,13 +35,12 @@
                 color: #333333;
             }
 
-            h1 {color:#333}
-
-            h2 {
-                padding-left: 5%;
-                font-size: 30px;
-                padding-top: 10px;
+            h1 {
+                text-align: center;
+                color:#333;
+                padding-bottom: 0;
             }
+
             /*navigation bar*/
             .navbar {
                 overflow: hidden;
@@ -109,31 +108,26 @@
             }
             
             /* content */
-            img {vertical-align: middle;
+           
+            .header {
+                vertical-align: center;
                 margin: auto;
                 width: 100%;
+                height: 50%;
             }
 
-            .index-description {
-                width: 90%;
-                padding: 20px;
-                margin: 10px;
-                display: inline-block; vertical-align: middle;
+            .myLogo {
+                display: block;
+                margin: auto;
+                width: 300px;
+                height: 300px;
             }
 
-            .button {
-                background-color: #333333;
-                border: none;
-                color: white;
-                padding: 15px 40px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 25px;
-                cursor: pointer;
-                -webkit-transition-duration: 0.4s; /* Safari */
-                transition-duration: 0.4s;
+            content {
+                display: block;
+                margin: auto;
+                left: 2em;
+                right: 2em;
             }
 
             /* footer */
@@ -175,10 +169,9 @@
             </div>
         </nav>
         
-        <div style="padding: 20px;">
-        
+        <div>
             <header id="home">
-                <img srcset="img/header(480px).jpg 480w,
+                <img class="header" srcset="img/header(480px).jpg 480w,
                 img/header(960px).jpg 960w,
                 img/header(1280px).jpg 1280w," sizes="(max-width: 480px) 100vw,
                (max-width: 960px) 90vw,
@@ -186,44 +179,16 @@
     	         1280px" src="img/header(480px).jpg" alt="soft blue header image with colorful swirls">
                 <h1> home </h1>
             </header>
-
-            <hr />
-            <section id="about">
-                <h1> about me </h1>
-                <p> hello, my name's allison! i'm currently a college junior studying digital media production. </p>
-            </section>
-
-            <hr />
-
-                <section id="projects">
-                    <article>
-                        <h2> current projects </h2>
-                        <ul>
-                            <details>
-                                <summary><li><strong>Photo Essay:</strong><em>"The Machine Stops" &nbsp;</em></li></summary>
-                                <p class="index-description"><strong>Assignment:</strong> Create a visual interpretation of the assigned reading - E.M. Forster's 1909 short story "The Machine Stops", but set today. In other words, read the story, consider how similar ideas may exist in our current reality and take photographs that could be an interpretation of Forseter's Machine.</p>
-                                <!--button redirects to projects page-->
-                                <a href="projects.html"><button class="button">view</button></a>
-                            </details>
-                            <br />
-                            <details>
-                                <summary><li> <strong> Video:</strong><em> lonely summer &nbsp;</em></li></summary>
-                                <p class="index-description"><strong>Assignment:</strong> Using the template created in class - create a brief video (approximately 1 min) or video series accompanied by textual explanation as webvtt. The video may be aesthetically or conceptually informed by the week 1 photo essay or a work inspired by assigned reading (how is technology affecting human behavior) or <em>follow your own inspiration</em>.</p>
-                                <!--button redirects to projects page-->
-                                <a href="projects.html"><button class="button">view</button></a>
-                            </details>
-                            <br />
-                            <details style="padding-bottom: 10px;">
-                                <summary><li> <strong> Layered Collage:</strong><em> the view from venus &nbsp;</em></li></summary>
-                                <p class="index-description"><strong>Assignment:</strong> Create a layered collage consisting of a background image and at minimum 3 absolutely position containers and 3 floats (left, right, clear) and the z-index to superimpose containers. Combine text, image, audio and video on the page, try making it topical.</em>.</p>
-                                <!--button redirects to individual project page-->
-                                <a href="the-view-from-venus.html"><button class="button">view</button></a>
-                            </details>
-                        </ul>
-                    </article>
-                </section>
+        
+        <content>            
+            <img class="myLogo" src="img/me-brand/me-logo.png.png" alt="logo with a cute drawing of a person wearing glasses and holding up a peace sign with a big smile">
+        </content>
+            
         </div>
+        
         <br />
+        <br />
+        
         <div class="footer">
             <p> <strong>medp 285</strong> | allison navarrete </p>
         </div>
